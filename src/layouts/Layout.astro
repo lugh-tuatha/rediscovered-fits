@@ -11,6 +11,8 @@ const
 	description = "A resseler of dbtk", 
 	image = "/images/"
 } = Astro.props;
+
+import Header from '../components/Header.astro';
 ---
 
 <!doctype html>
@@ -24,7 +26,8 @@ const
 		<meta property="og:image" content={image} />
 		<title>{title}</title>
 	</head>
-	<body class="min-h-screen">
+	<body class="min-h-screen bg-background">
+		<Header />
 		<slot />
 	</body>
 </html>

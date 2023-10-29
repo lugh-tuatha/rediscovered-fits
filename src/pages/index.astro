@@ -2,10 +2,25 @@
 import Layout from '../layouts/Layout.astro';
 import Main from '../components/Main.astro';
 import H1 from '../components/H1.astro';
+import Button from '../components/Button.astro';
+
+import { Image } from 'astro:assets';
+
+import HeroImage from '../images/hero.jpg'
 ---
 
 <Layout title="Welcome to Astro.">
 	<Main>
-		<H1>DBTK</H1>
+		<div class="flex gap-12 mt-8">
+			<div class="w-1/2">
+				<h1 class="font-bold text-6xl">FIND YOUR PERFECT ONE</h1>
+				<p class="text-gray-500 opacity-60 my-4">Explore a curated collection of DBTK's hottest fashion trends and streetwear, designed to help you express your unique personality and style</p>
+				<Button>Shop now</Button>
+			</div>
+
+			<div class="w-1/2">
+				<Image src={HeroImage} alt="hero"/>
+			</div>
+		</div>
 	</Main>
-</Layout>
+</Layout>	
